@@ -1,26 +1,24 @@
-//API Call - YouTube
 $(document).ready(function() {
-//Variables for YouTube API call
-    var apiKey = "";
-    var playListId = "PL-qpR0uYyvkYitfDZOPmNAivTZPP4pacs";
-    //API Url
-    var url = "https://www.googleapis.com/youtube/v3/playlistItems";
-    //Object for API call
+    // Global variables
+    var key = "AIzaSyAwqRH_uY8zqhE37uzmLOftrMYaTbT36RM";
+    var playlistId = "PL-qpR0uYyvkYitfDZOPmNAivTZPP4pacs";
+    var URL = "https://www.googleapis.com/youtube/v3/playlistItems";
     var options = {
-        part: 'snippet',
-        key: apiKey,
-        maxResults: 10, 
-        playListId: playListId,
+        part:"snippet",
+        key: key,
+        maxResults: 20,
+        playlistId: playlistId,
     }
 
-//Function for API Call
-load();
+    loadVids();
 
-function load() {
-    $.getJSON(url, options, function(response){
-    console.log(response );
-    })
-}
+    function loadVids() {
+        // $.getJSON(URL, options, playlistId, function(data) {
+        // console.log(data);
+        // })
 
+        $.getJSON(URL, options, function(data) {
+            console.log(data);
+        })
+    } 
 });
-
