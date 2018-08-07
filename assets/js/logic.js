@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Global variables
-    var key = "AIzaSyAwqRH_uY8zqhE37uzmLOftrMYaTbT36RM";
+    var key = "";
     var playlistId = "PL-qpR0uYyvkYitfDZOPmNAivTZPP4pacs";
     var URL = "https://www.googleapis.com/youtube/v3/playlistItems";
     var options = {
