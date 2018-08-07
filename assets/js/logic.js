@@ -54,9 +54,9 @@ $(document).ready(function() {
          }); 
       }
 
-        $(".part-two").on("click", 'article', function () {
-            var newId = $(this).attr("data-key");
-            console.log(newId);
-            ytPlayer(id);
+    $(".part-two").on("click", 'article', function () {
+        var newId = $(this).attr("data-key");
+        console.log(newId);
+        ytPlayer(newId);
         });
     });
